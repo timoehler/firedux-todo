@@ -1,1 +1,1 @@
-export const FETCH_TODOS = "fetch todos";
+export const FETCH_TODOS = 'fetch todos';

@@ -1,14 +1,14 @@
-import React, { Component } from "react";
-import { connect } from "react-redux";
-import _ from "lodash";
-import * as actions from "../actions";
-import ListItem from "./ListItem";
-import "./style.css";
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import _ from 'lodash';
+import * as actions from '../actions';
+import ListItem from './ListItem';
+import './style.css';
 
 class List extends Component {
   state = {
     showForm: false,
-    formValue: ""
+    formValue: ''
   };
 
   inputChange = event => {
@@ -20,7 +20,7 @@ class List extends Component {
     const { addToDo } = this.props;
     event.preventDefault();
     addToDo({ title: formValue });
-    this.setState({ formValue: "" });
+    this.setState({ formValue: '' });
   };
 
   renderForm = () => {
@@ -30,12 +30,7 @@ class List extends Component {
         <div id="todo-add-form" className="col s10 offset-s1">
           <form onSubmit={this.formSubmit}>
             <div className="input-field">
-              <input
-                value={formValue}
-                onChange={this.inputChange}
-                id="toDoNext"
-                type="text"
-              />
+              <input value={formValue} onChange={this.inputChange} id="toDoNext" type="text" />
               <label htmlFor="toDoNext">What Next?</label>
             </div>
           </form>

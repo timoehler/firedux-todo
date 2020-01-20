@@ -1,6 +1,6 @@
-import React, { Component } from "react";
-import { connect } from "react-redux";
-import { completeToDo } from "../actions";
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { completeToDo } from '../actions';
 
 class ListItem extends Component {
   completeClick = completeTodoId => {
