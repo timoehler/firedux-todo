@@ -1,5 +1,10 @@
-import { todosRef } from "../firebase.js";
+import * as firebase from "firebase";
+
 import { FETCH_TODOS } from "./types";
+
+const databaseRef = firebase.database().ref();
+export const todosRef = databaseRef.child("todos");
+
 export const addToDo = newToDo => async dispatch => {
   todosRef.push().set(newToDo);
 };

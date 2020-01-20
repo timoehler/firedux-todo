@@ -7,6 +7,7 @@ const config = {
   storageBucket: "firedux-todo-3dba3.appspot.com",
   messagingSenderId: "1049415002530"
 };
-firebase.initializeApp(config);
-const databaseRef = firebase.database().ref();
-export const todosRef = databaseRef.child("todos");
+
+const firebaseApp = firebase.initializeApp(config);
+
+export default firebaseApp;
